@@ -1,0 +1,16 @@
+<h3 class="text-center text-info">View Employee Details</h3>
+<div class="col-md-6 offset-md-3 ">
+  <div class="form-group ">
+    <label class="text-info"> <b> Title : </b></label> {{ book.title }}
+  </div>
+  <div class="form-group ">
+    <label class="text-info"> <b> Author : </b></label> {{ book.author }}
+  </div>
+  <div class="form-group ">
+    <label class="text-info"> <b> Description : </b></label> {{ book.description }}
+  </div>
+  <div>
+    <button class="btn btn-warning mr-3" (click)="deleteBook()">Delete</button>
+    <a class="btn btn-info" [routerLink]="''"> Back </a>
+  </div>
+</div>
