@@ -4,13 +4,16 @@
       <a class="btn btn-primary " [routerLink]="'create'">Add New Product</a>
     </div>
     <p>Quantity of books: {{quantity}}</p>
-    <table class="table table-bordered text-center">
+    <table class="table table-striped text-center table-hover table-bordered">
+      <thead>
       <tr style="background-color: #86cfda">
         <th>#</th>
         <th>Title</th>
         <th>Author</th>
         <th colspan="2">Action</th>
       </tr>
+      </thead>
+      <tbody>
       <tr *ngFor="let b of books; let i = index">
         <td>{{i + 1}}</td>
         <td><a [routerLink]="'show/' + b.id">{{b.title}}</a></td>
@@ -34,6 +37,7 @@
             </svg>
             Delete</a></td>
       </tr>
+      </tbody>
     </table>
   </div>
 </section>
